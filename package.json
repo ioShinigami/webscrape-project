@@ -1,0 +1,51 @@
+{
+  "name": "boilerplate-typescript-node",
+  "version": "1.0.0",
+  "author": "ioshinigami",
+  "license": "MIT",
+  "main": "./build/index.js",
+  "description": "Minimalist typescript boilerplate",
+  "keywords": [
+    "boilerplate",
+    "typescript",
+    "node"
+  ],
+  "scripts": {
+    "start": "node build/index.js",
+    "dev": "nodemon",
+    "develop": "ts-node ./src/index.ts",
+    "test": "DOTENV_CONFIG_PATH=.env.test jest",
+    "test:watch": "DOTENV_CONFIG_PATH=.env.test jest --watch",
+    "clean": "rimraf build",
+    "build": "tsc -p tsconfig.build.json",
+    "build:watch": "tsc -w -p tsconfig.build.json",
+    "lint": "eslint ./src --ext .ts",
+    "prettier": "prettier --write './src/**/*.{ts,js,json}'"
+  },
+  "dependencies": {
+    "dotenv": "16.0.1",
+    "moment": "^2.29.3",
+    "puppeteer": "^14.0.0",
+    "puppeteer-core": "^14.0.0",
+    "puppeteer-extra": "^3.2.3",
+    "puppeteer-extra-plugin-stealth": "^2.9.0",
+    "puppeteer-full-page-screenshot": "^1.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "27.5.1",
+    "@types/node": "16.11.34",
+    "@types/puppeteer": "^5.4.6",
+    "@typescript-eslint/eslint-plugin": "5.23.0",
+    "@typescript-eslint/parser": "5.23.0",
+    "eslint": "8.15.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-jest": "26.1.5",
+    "jest": "28.1.0",
+    "nodemon": "2.0.16",
+    "prettier": "2.6.2",
+    "rimraf": "3.0.2",
+    "ts-jest": "28.0.2",
+    "ts-node": "10.7.0",
+    "typescript": "4.6.4"
+  }
+}
